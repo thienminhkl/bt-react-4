@@ -44,9 +44,9 @@ const stateDefault = [
 			{ "soGhe": "B4", "gia": 75000, "daDat": false },
 			{ "soGhe": "B5", "gia": 75000, "daDat": false },
 			{ "soGhe": "B6", "gia": 75000, "daDat": false },
-			{ "soGhe": "B7", "gia": 75000, "daDat": false },
-			{ "soGhe": "B8", "gia": 75000, "daDat": false },
-			{ "soGhe": "B9", "gia": 75000, "daDat": false },
+			{ "soGhe": "B7", "gia": 0, "daDat": true },
+			{ "soGhe": "B8", "gia": 0, "daDat": true },
+			{ "soGhe": "B9", "gia": 0, "daDat": true },
 			{ "soGhe": "B10", "gia": 75000, "daDat": false },
 			{ "soGhe": "B11", "gia": 75000, "daDat": false },
 			{ "soGhe": "B12", "gia": 75000, "daDat": false }
@@ -55,8 +55,8 @@ const stateDefault = [
 	{
 		"hang": "C",
 		"danhSachGhe": [
-			{ "soGhe": "C1", "gia": 75000, "daDat": false },
-			{ "soGhe": "C2", "gia": 75000, "daDat": false },
+			{ "soGhe": "C1", "gia": 0, "daDat": true },
+			{ "soGhe": "C2", "gia": 0, "daDat": true },
 			{ "soGhe": "C3", "gia": 75000, "daDat": false },
 			{ "soGhe": "C4", "gia": 75000, "daDat": false },
 			{ "soGhe": "C5", "gia": 75000, "daDat": false },
@@ -66,15 +66,15 @@ const stateDefault = [
 			{ "soGhe": "C9", "gia": 75000, "daDat": false },
 			{ "soGhe": "C10", "gia": 75000, "daDat": false },
 			{ "soGhe": "C11", "gia": 75000, "daDat": false },
-			{ "soGhe": "C12", "gia": 75000, "daDat": false }
+			{ "soGhe": "C12", "gia": 0, "daDat": true }
 		]
 	}, {
 		"hang": "D",
 		"danhSachGhe": [
 			{ "soGhe": "D1", "gia": 75000, "daDat": false },
 			{ "soGhe": "D2", "gia": 75000, "daDat": false },
-			{ "soGhe": "D3", "gia": 75000, "daDat": false },
-			{ "soGhe": "D4", "gia": 75000, "daDat": false },
+			{ "soGhe": "D3", "gia": 0, "daDat": true },
+			{ "soGhe": "D4", "gia": 0, "daDat": true },
 			{ "soGhe": "D5", "gia": 75000, "daDat": false },
 			{ "soGhe": "D6", "gia": 75000, "daDat": false },
 			{ "soGhe": "D7", "gia": 75000, "daDat": false },
@@ -88,13 +88,13 @@ const stateDefault = [
 		"hang": "E",
 		"danhSachGhe": [
 			{ "soGhe": "E1", "gia": 75000, "daDat": false },
-			{ "soGhe": "E2", "gia": 75000, "daDat": false },
+			{ "soGhe": "E2", "gia": 0, "daDat": true },
 			{ "soGhe": "E3", "gia": 75000, "daDat": false },
 			{ "soGhe": "E4", "gia": 75000, "daDat": false },
 			{ "soGhe": "E5", "gia": 75000, "daDat": false },
 			{ "soGhe": "E6", "gia": 75000, "daDat": false },
 			{ "soGhe": "E7", "gia": 75000, "daDat": false },
-			{ "soGhe": "E8", "gia": 75000, "daDat": false },
+			{ "soGhe": "E8", "gia": 0, "daDat": true },
 			{ "soGhe": "E9", "gia": 75000, "daDat": false },
 			{ "soGhe": "E10", "gia": 75000, "daDat": false },
 			{ "soGhe": "E11", "gia": 75000, "daDat": false },
@@ -124,11 +124,11 @@ const stateDefault = [
 			{ "soGhe": "G3", "gia": 75000, "daDat": false },
 			{ "soGhe": "G4", "gia": 75000, "daDat": false },
 			{ "soGhe": "G5", "gia": 75000, "daDat": false },
-			{ "soGhe": "G6", "gia": 75000, "daDat": false },
-			{ "soGhe": "G7", "gia": 75000, "daDat": false },
-			{ "soGhe": "G8", "gia": 75000, "daDat": false },
-			{ "soGhe": "G9", "gia": 75000, "daDat": false },
-			{ "soGhe": "G10", "gia": 75000, "daDat": false },
+			{ "soGhe": "G6", "gia": 0, "daDat": true },
+			{ "soGhe": "G7", "gia": 0, "daDat": true },
+			{ "soGhe": "G8", "gia": 0, "daDat": true },
+			{ "soGhe": "G9", "gia": 0, "daDat": true },
+			{ "soGhe": "G10", "gia": 0, "daDat": true },
 			{ "soGhe": "G11", "gia": 75000, "daDat": false },
 			{ "soGhe": "G12", "gia": 75000, "daDat": false }
 		]
@@ -136,7 +136,7 @@ const stateDefault = [
 		"hang": "H",
 		"danhSachGhe": [
 			{ "soGhe": "H1", "gia": 75000, "daDat": false },
-			{ "soGhe": "H2", "gia": 75000, "daDat": false },
+			{ "soGhe": "H2", "gia": 0, "daDat": true },
 			{ "soGhe": "H3", "gia": 75000, "daDat": false },
 			{ "soGhe": "H4", "gia": 75000, "daDat": false },
 			{ "soGhe": "H5", "gia": 75000, "daDat": false },
@@ -188,21 +188,29 @@ const stateDefault = [
 export const MovieTicketReducer = (state = stateDefault, action) => {
 	switch (action.type) {
 		case 'CHON_VE': {
-			const { i, iCol } = action.payload;
+			const { i, iCol, text } = action.payload;
+			if (text) {		
+				window.confirm('Bạn có muốn hủy vé này không?')
+			}
 			if (state[i + 1].danhSachGhe[iCol].gia !== 0) {
 				state[i + 1].danhSachGhe[iCol].daDat = !state[i + 1].danhSachGhe[iCol].daDat
 			}
+		
 			return [...state]
 		}
 		case 'DAT_VE': {
-			for (let i = 0; i < state.slice(1).length; i++) {
-				let ds = state.slice(1)[i].danhSachGhe
-				for (let j = 0; j < ds.length; j++) {
-					if (ds[j].daDat && ds[j].gia !== 0) {
-						ds[j].gia = 0
+			if(window.confirm('Xác nhận mua vé?')){
+				for (let i = 0; i < state.slice(1).length; i++) {
+					let ds = state.slice(1)[i].danhSachGhe
+					for (let j = 0; j < ds.length; j++) {
+						if (ds[j].daDat && ds[j].gia !== 0) {
+							ds[j].gia = 0
+						}
 					}
 				}
 			}
+			
+
 			return [...state]
 		}
 		default:

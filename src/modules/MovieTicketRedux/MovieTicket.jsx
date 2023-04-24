@@ -9,21 +9,25 @@ class MovieTicket extends Component {
 		// const daDat = data.slice(1).map((i) => i.danhSachGhe.filter((j) => j.daDat).length)
 		var dangChon = 0;
 		var daDat = 0;
+		var tongTienVe = 0;
+		var tongSoVe = 0;
 
 		for (let i = 0; i < data.slice(1).length; i++) {
 			let ds = data.slice(1)[i].danhSachGhe
 			for (let j = 0; j < ds.length; j++) {
+				tongSoVe += 1;
 				if (ds[j].daDat) {
 					if (ds[j].gia === 0) {
 						daDat += 1;
 					} else {
 						dangChon += 1;
+						tongTienVe += ds[j].gia;
 					}
 				}
 			}
 		}
 
-		var chuaDat = 120 - dangChon - daDat;
+		var chuaDat = tongSoVe - dangChon - daDat;
 
 
 		return (
@@ -55,7 +59,7 @@ class MovieTicket extends Component {
 																`btn btn-sm ${!itemCol.daDat ? 'ghe' : 'gheDangChon'}`
 																: 'btn btn-sm gheDuocChon'
 														}
-														onClick={() => { chonVe(index, indexCol) }}
+														onClick={() => { chonVe(index, indexCol, false) }}
 													>{itemCol.soGhe}</button>
 												</td>
 											)}
@@ -103,7 +107,7 @@ class MovieTicket extends Component {
 												{itemCol.gia.toLocaleString()} đồng
 											</td>
 											<td>
-												<button className='cancel' onClick={() => chonVe(index, indexCol)}>X</button>
+												<button className='cancel' onClick={() => chonVe(index, indexCol, true)}>X</button>
 											</td>
 										</tr>
 
@@ -113,8 +117,8 @@ class MovieTicket extends Component {
 									<td>
 										Số lượng vé: {dangChon}
 									</td>
-									<td colspan="2">
-										Tổng tiền: {(dangChon * 75000).toLocaleString()} đồng
+									<td colSpan="2">
+										Tổng tiền: {(tongTienVe).toLocaleString()} đồng
 									</td>
 								</tr>
 							</tbody>
@@ -136,12 +140,13 @@ const mapStateToProps = (rootReducer) => {
 
 const mapDisPacthToProps = (dispatch) => {
 	return {
-		chonVe: (i, iCol) => {
+		chonVe: (i, iCol, text) => {
 			const action = {
 				type: 'CHON_VE',
 				payload: {
 					i,
-					iCol
+					iCol,
+					text
 				},
 			};
 			dispatch(action);
