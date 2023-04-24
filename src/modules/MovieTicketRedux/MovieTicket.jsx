@@ -109,6 +109,14 @@ class MovieTicket extends Component {
 
 									)
 								)}
+								<tr>
+									<td>
+										Số lượng vé: {dangChon}
+									</td>
+									<td colspan="2">
+										Tổng tiền: {dangChon * 7500} đồng
+									</td>
+								</tr>
 							</tbody>
 						</table>
 
