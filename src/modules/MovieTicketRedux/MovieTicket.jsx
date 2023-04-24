@@ -100,7 +100,7 @@ class MovieTicket extends Component {
 												{itemCol.soGhe}
 											</td>
 											<td>
-												{itemCol.gia}
+												{itemCol.gia.toLocaleString()} đồng
 											</td>
 											<td>
 												<button className='cancel' onClick={() => chonVe(index, indexCol)}>X</button>
@@ -114,7 +114,7 @@ class MovieTicket extends Component {
 										Số lượng vé: {dangChon}
 									</td>
 									<td colspan="2">
-										Tổng tiền: {dangChon * 7500} đồng
+										Tổng tiền: {(dangChon * 75000).toLocaleString()} đồng
 									</td>
 								</tr>
 							</tbody>
