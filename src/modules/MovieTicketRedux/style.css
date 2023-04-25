@@ -86,7 +86,7 @@
     border: 3px solid rgb(109, 238, 109);
     background: rgb(109, 238, 109);
     color: #fff;
-    cursor: no-drop !important;
+    font-size: 12px;
     border-radius: 5px;
     width: 45px;
     height: 45px;
@@ -99,6 +99,7 @@
     background: #fff;
     color: #000000;
     cursor: no-drop !important;
+    font-size: 12px;
     border-radius: 5px;
     width: 45px;
     height: 45px;

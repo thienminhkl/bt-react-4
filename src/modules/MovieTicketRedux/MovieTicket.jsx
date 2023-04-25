@@ -56,8 +56,7 @@ class MovieTicket extends Component {
 													<button
 														className={
 															itemCol.gia !== 0 ?
-																`btn btn-sm ${!itemCol.daDat ? 'ghe' : 'gheDangChon'}`
-																: 'btn btn-sm gheDuocChon'
+																`${!itemCol.daDat ? 'ghe' : 'gheDangChon'}` : 'gheDuocChon'
 														}
 														onClick={() => { chonVe(index, indexCol, false) }}
 													>{itemCol.soGhe}</button>
@@ -76,7 +75,7 @@ class MovieTicket extends Component {
 							<span>DANH SÁCH GHẾ BẠN CHỌN</span>
 						</h2>
 						<div>
-							<button className="gheDuocChon">{daDat}</button>
+							<button className="gheDuocChon" disabled>{daDat}</button>
 							<span> Ghế đã đặt</span>
 						</div>
 						<div className='my-3'>
