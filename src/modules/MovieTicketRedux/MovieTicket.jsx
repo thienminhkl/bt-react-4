@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './style.css'
 import { connect } from 'react-redux'
+import { CHON_VE, DAT_VE } from './MovieTicketType';
 
 class MovieTicket extends Component {
 
@@ -141,7 +142,7 @@ const mapDisPacthToProps = (dispatch) => {
 	return {
 		chonVe: (i, iCol, text) => {
 			const action = {
-				type: 'CHON_VE',
+				type: CHON_VE,
 				payload: {
 					i,
 					iCol,
@@ -152,7 +153,7 @@ const mapDisPacthToProps = (dispatch) => {
 		},
 		datVe: () => {
 			const action = {
-				type: 'DAT_VE',
+				type: DAT_VE,
 			};
 			dispatch(action);
 		}

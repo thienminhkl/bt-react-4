@@ -1,3 +1,4 @@
+import { CHON_VE, DAT_VE } from "../modules/MovieTicketRedux/MovieTicketType";
 
 const stateDefault = [
 	{
@@ -187,7 +188,7 @@ const stateDefault = [
 
 export const MovieTicketReducer = (state = stateDefault, action) => {
 	switch (action.type) {
-		case 'CHON_VE': {
+		case CHON_VE: {
 			const { i, iCol, text } = action.payload;
 
 			if (
@@ -199,7 +200,7 @@ export const MovieTicketReducer = (state = stateDefault, action) => {
 
 			return [...state]
 		}
-		case 'DAT_VE': {
+		case DAT_VE: {
 			if (window.confirm('Xác nhận mua vé?')) {
 				for (let i = 0; i < state.slice(1).length; i++) {
 					let ds = state.slice(1)[i].danhSachGhe
