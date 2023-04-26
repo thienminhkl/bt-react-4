@@ -190,7 +190,10 @@ export const MovieTicketReducer = (state = stateDefault, action) => {
 		case 'CHON_VE': {
 			const { i, iCol, text } = action.payload;
 
-			if ((state[i + 1].danhSachGhe[iCol].gia !== 0 && !text) || (text && window.confirm('Bạn có muốn hủy vé này không?'))) {
+			if (
+				(state[i + 1].danhSachGhe[iCol].gia !== 0 && !text) ||
+				(text && window.confirm('Bạn có muốn hủy vé này không?'))
+			) {
 				state[i + 1].danhSachGhe[iCol].daDat = !state[i + 1].danhSachGhe[iCol].daDat
 			}
 
