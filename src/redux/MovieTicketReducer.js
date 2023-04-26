@@ -189,17 +189,15 @@ export const MovieTicketReducer = (state = stateDefault, action) => {
 	switch (action.type) {
 		case 'CHON_VE': {
 			const { i, iCol, text } = action.payload;
-			if (text) {		
-				window.confirm('Bạn có muốn hủy vé này không?')
-			}
-			if (state[i + 1].danhSachGhe[iCol].gia !== 0) {
+
+			if ((state[i + 1].danhSachGhe[iCol].gia !== 0 && !text) || (text && window.confirm('Bạn có muốn hủy vé này không?'))) {
 				state[i + 1].danhSachGhe[iCol].daDat = !state[i + 1].danhSachGhe[iCol].daDat
 			}
-		
+
 			return [...state]
 		}
 		case 'DAT_VE': {
-			if(window.confirm('Xác nhận mua vé?')){
+			if (window.confirm('Xác nhận mua vé?')) {
 				for (let i = 0; i < state.slice(1).length; i++) {
 					let ds = state.slice(1)[i].danhSachGhe
 					for (let j = 0; j < ds.length; j++) {
@@ -209,7 +207,7 @@ export const MovieTicketReducer = (state = stateDefault, action) => {
 					}
 				}
 			}
-			
+
 
 			return [...state]
 		}
